@@ -2,7 +2,8 @@ import React, {PropTypes} from 'react'
 import ApplicationLayout from './components/ApplicationLayout'
 import DocumentContainer from './containers/DocumentContainer'
 import DocumentListContainer from './containers/DocumentListContainer'
-
+import EventContainer from './containers/EventContainer'
+import EventListContainer from './containers/EventListContainer'
 
 // Application is the root component for your application.
 export default function Application(props) {
@@ -22,14 +23,17 @@ Application.propTypes = {
 // with `return` statements instead of `break`
 const selectChildContainer = props => {
   const location = props.state.navigation.location
-  
+
   let child
   switch (location.name) {
-    case 'documentEdit':        
+    case 'documentEdit':
       child = <DocumentContainer {...props} id={location.options.id} />
     case 'documentList':
       return <DocumentListContainer {...props} id={location.options.id}>{child}</DocumentListContainer>
-
+    case 'eventEdit':
+      child = <EventContainer {...props} id={location.options.id} />
+    case 'eventList':
+      return <EventListContainer {...props} id={location.options.id}>{child}</EventListContainer>
     default:
       return "Not Found"
   }

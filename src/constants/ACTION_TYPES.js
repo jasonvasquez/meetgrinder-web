@@ -9,6 +9,10 @@ export default defineActionTypes({
     SET_QUERY
   `,
 
+  EVENT_LIST_VIEW: `
+    SET_QUERY
+  `,
+
   DOCUMENT_VIEW: `
     UPDATE_DATA
     SET_ERRORS
@@ -16,12 +20,22 @@ export default defineActionTypes({
     CLEAR
   `,
 
+  EVENT_VIEW: `
+    UPDATE_DATA
+    SET_ERRORS
+    REMOVE_STALE_ERRORS
+    CLEAR
+  `,
 
   /*
    * Data model
    */
 
   DOCUMENT_DATA: `
+    UPDATE
+  `,
+
+  EVENT_DATA: `
     UPDATE
   `,
 

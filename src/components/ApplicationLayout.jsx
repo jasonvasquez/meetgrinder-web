@@ -20,6 +20,15 @@ const ApplicationLayout = ({
       >
         Documents
       </Link>
+      <Link
+        name='eventList'
+        className={{
+          'link': true,
+          'link-active': locationName == 'eventList' || locationName == 'eventEdit',
+        }}
+      >
+        Events
+      </Link>
     </nav>
     <main className='content'>
       {children}
