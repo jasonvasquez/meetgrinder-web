@@ -1,5 +1,7 @@
 # Unicorn Standard Starter Kit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jasonvasquez/meetgrinder-web.svg)](https://greenkeeper.io/)
+
 This starter kit provides you with the code and conventions you need to get straight into building your React/Redux based app.
 
 ## Happiness is six lines away
